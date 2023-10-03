@@ -1,12 +1,12 @@
-<div class="p-5 w-100 d-flex justify-content-center">
+<!-- <div class="p-5 w-100 d-flex justify-content-center">
   <button class="btn m-3" (click)="tab = 1" [class.active]="tab === 1">Ng Model expample</button>
   <button class="btn m-3" (click)="tab = 2" [class.active]="tab === 2">Structural Directive expample</button>
   <button class="btn m-3" (click)="tab = 3" [class.active]="tab === 3">Template driven Forms</button>
   <button class="btn m-3" (click)="tab = 4" [class.active]="tab === 4">Reactive Forms</button>
-</div>
+</div> -->
 
 
-<ng-container [ngSwitch]="tab">
+<!-- <ng-container [ngSwitch]="tab">
   <div *ngSwitchCase="1">
     <app-ng-model-example ></app-ng-model-example>
   </div>
@@ -16,5 +16,18 @@
   <div *ngSwitchCase="3">
     <app-template-driven-forms></app-template-driven-forms>
   </div>
+  <div *ngSwitchCase="4">
+    <app-reactive-form-example></app-reactive-form-example>
+  </div>
   <h3 class="w-100 p-5 d-flex justify-content-center text-muted" *ngSwitchDefault>Nothing to show</h3>
-</ng-container>
+</ng-container> -->
+
+<div class="p-5 w-100 d-flex justify-content-center">
+  <button class="btn m-3" routerLink="/home" routerLinkActive="active">Home</button>
+  <button class="btn m-3" routerLink="/model" routerLinkActive="active">Ng Model expample</button>
+  <button class="btn m-3" routerLink="/directive" routerLinkActive="active">Structural Directive expample</button>
+  <button class="btn m-3" routerLink="/template" routerLinkActive="active">Template driven Forms</button>
+  <button class="btn m-3" routerLink="/reactive" routerLinkActive="active">Reactive Forms</button>
+</div>
+
+<router-outlet></router-outlet>
